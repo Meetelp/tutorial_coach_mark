@@ -232,7 +232,7 @@ class AnimatedStaticFocusLightState extends AnimatedFocusLightState {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: _targetFocus.enableOverlayTab
           ? () => _tapHandler(overlayTap: true)
           : null,
@@ -252,8 +252,8 @@ class AnimatedStaticFocusLightState extends AnimatedFocusLightState {
               Positioned(
                 left: left,
                 top: top,
-                child: InkWell(
-                  borderRadius: _betBorderRadiusTarget(),
+                child: GestureDetector(
+                  // borderRadius: _betBorderRadiusTarget(),
                   onTapDown: _tapHandlerForPosition,
                   onTap: _targetFocus.enableTargetTab
                       ? () => _tapHandler(targetTap: true)
@@ -342,7 +342,7 @@ class AnimatedPulseFocusLightState extends AnimatedFocusLightState {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: _targetFocus.enableOverlayTab
           ? () => _tapHandler(overlayTap: true)
           : null,
@@ -368,8 +368,8 @@ class AnimatedPulseFocusLightState extends AnimatedFocusLightState {
                   Positioned(
                     left: left,
                     top: top,
-                    child: InkWell(
-                      borderRadius: _betBorderRadiusTarget(),
+                    child: GestureDetector(
+                      // borderRadius: _betBorderRadiusTarget(),
                       onTap: _targetFocus.enableTargetTab
                           ? () => _tapHandler(targetTap: true)
 
